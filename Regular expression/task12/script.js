@@ -1,11 +1,17 @@
-console.log(perfect_number(44));
-console.log(perfect_number(8128));
-console.log(perfect_number(128));
-console.log(perfect_number(28));
-function perfect_number(num) {
-var sumDivisors=0;
-for (var i = 1; i <= num/2; i++) {
-if(num%i==0){sumDivisors+=i;}
-}
-return num===sumDivisors? "Number is perfect":"Number isn't perfect";
-}
+function isUsZipCode(str)  
+{  
+ regexp = /^[0-9]{5}(?:-[0-9]{4})?$/;  
+    
+        if (regexp.test(str))  
+          {  
+            return true;  
+          }  
+        else  
+          {  
+            return false;  
+          }  
+}  
+  
+console.log(isUsZipCode("03201-2150"));  
+console.log(isUsZipCode("78922"));  
+console.log(isUsZipCode("7892"));

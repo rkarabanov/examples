@@ -1,16 +1,17 @@
-function matrix(n) {
-	var string;
-	console.log('----------');  
-	for (var i = 0; i < n; i++) {
-		string='';
-		for (var j = 0; j < n; j++) {
-	if(j==i){string+=1;}
-	else { string+=0;}	
-	}
-	console.log(string);  
-	}
-	console.log('----------');  
-}
-
-matrix(5);
-matrix(8);
+function isAlphaNumeric(str)  
+{  
+ regexp = /^[0-9a-zA-Z]+$/;  
+    
+        if (regexp.test(str))  
+          {  
+            return true;  
+          }  
+        else  
+          {  
+            return false;  
+          }  
+}  
+  
+console.log(isAlphaNumeric("37828sad"));  
+  
+console.log(isAlphaNumeric("3243#$sew"));  

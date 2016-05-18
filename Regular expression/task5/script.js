@@ -1,7 +1,14 @@
-x=window.prompt("Enter your string ");
-x=x.split("");
-for (var i = 0; i < x.length; i++) {
-	if(i==0||x[i-1]==" "){x[i]=x[i].toUpperCase();
-	}
-}
-window.alert(x.join(""));
+function Trim(str)  
+{  
+  var result;  
+  if (typeof str === 'string')   
+  {  
+    result = str.replace(/^\s+|\s+$/g, '');  
+    return result;  
+  }  
+  else  
+  {  
+    return false;  
+  }  
+}  
+console.log(Trim(' w3resource '));  

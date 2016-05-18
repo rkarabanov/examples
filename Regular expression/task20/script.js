@@ -1,10 +1,18 @@
-console.log(randomString(8));
-function randomString(n) {
-	var text = "";  
-var char_list = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";  
-for(var i=0; i < n; i++ )  
-{    
-text += char_list.charAt(Math.floor(Math.random() * char_list.length));  
-} 
-return text;
-}
+function is_html(str)  
+{  
+ regexp = /^[0-9a-z_\-]+$/;  
+    
+        if (regexp.test(str))  
+          {  
+            return true;  
+          }  
+        else  
+          {  
+            return false;  
+          }  
+}  
+  
+
+console.log(is_html(''));  
+console.log(is_html('_selectorA-33'));
+console.log(is_html('_selector-33'));

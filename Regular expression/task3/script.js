@@ -1,25 +1,14 @@
-function substrings(str1)  
+function validEmail(str)  
 {  
-var array1 = str1.split("");  
-  
-var combi = [];  
-var temp= "";  
-var slent = Math.pow(2, array1.length);  
-  
-for (var i = 0; i < slent ; i++)  
-{  
-    temp= "";  
-    for (var j=0;j<array1.length;j++) {  
-        if ((i & Math.pow(2,j))){   
-            temp += array1[j];  
-        }  
-    }  
-    if (temp !== "")  
-    {  
-        combi.push(temp);  
-    }  
+var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+if(mailformat.test(str))  
+{    
+console.log("Valid email address!");    
+}    
+else    
+{    
+console.log("You have entered an invalid email address!");    
 }  
-  console.log(combi.join("\n"));  
 }  
   
-substrings("bread");  
+validEmail('me-info@example.com'); 

@@ -1,9 +1,6 @@
-function is_creditCard(str)  
+function isCreditCard(str)  
 {  
- regexp = /^(?:(4[0-9]{12}(?:[0-9]{3})?)|
- (5[1-5][0-9]{14})|(6(?:011|5[0-9]{2})[0-9]{12})|
- (3[47][0-9]{13})|(3(?:0[0-5]|[68][0-9])[0-9]{11})|
- ((?:2131|1800|35[0-9]{3})[0-9]{11}))$/;  
+regexp = /^(([0-9]{4}-){3})([0-9]{4})$/;
     
         if (regexp.test(str))  
           {  
@@ -15,6 +12,6 @@ function is_creditCard(str)
           }  
 }  
   
-console.log(is_creditCard("9999-9999-9999-9999"));  
+console.log(isCreditCard("9999-9999-9999-9999"));  
   
-console.log(is_creditCard("9999-9999-99991-992"));  
+console.log(isCreditCard("999-9999-9999-992"));  

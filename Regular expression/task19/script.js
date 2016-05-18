@@ -1,9 +1,19 @@
-function elementsLarger(arr,num) {
-	arr=arr.sort(function(a,b){return a-b});
-	var buf;
-	for (var i = 0; i < arr.length; i++) {
-		if(arr[i]>num)return arr.slice(i,arr.length);
-	}
-	return null;
-}
-console.log(elementsLarger([23,312,12,346,12,46,67,1243,23],49));
+function is_html(str)  
+{  
+ regexp = /^<([a-z]+)([0-9]+|)>(\w|)<\/([a-z]+)([0-9]+|)>$/g;  
+    
+        if (regexp.test(str))  
+          {  
+            return true;  
+          }  
+        else  
+          {  
+            return false;  
+          }  
+}  
+  
+console.log(is_html('<br></br>'));  
+  
+console.log(is_html(''));  
+  
+console.log(is_html('.selector'));

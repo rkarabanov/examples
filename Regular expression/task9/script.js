@@ -1,25 +1,17 @@
-function detect_data_type(value)  
+function isUrl(str)  
 {  
-var types = [Function, RegExp, Number, String, Boolean, Object];  
-      
-if (typeof value === "object" || typeof value === "function")   
-    {  
-     for (var x = 0; x < types.length; x++)   
-     {  
-            if (value instanceof types[x])  
-            {  
-                return types[x];  
-            }  
-      }  
-    }  
-      
-    return typeof value;  
+        regexp=/^((http|https|ftp)\:\/\/|)www\.((\w|[-.]){1,})\w\.[a-z]{2,}?/;
+        if (regexp.test(str))  
+        {  
+          return true;  
+        }  
+        else  
+        {  
+          return false;  
+        }  
 }  
-function function_name() {
-	return 66;
-}
-console.log(detect_data_type(12));  
-console.log(detect_data_type('w3resource'));  
-console.log(detect_data_type(false));  
-console.log(detect_data_type(null));  
-console.log(detect_data_type(function_name()));  
+  
+console.log(isUrl("http://www.example.com"));  
+console.log(isUrl("https://www.example.com"));  
+console.log(isUrl("www.example.com"));  
+console.log(isUrl("example.com"));  

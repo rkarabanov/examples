@@ -1,8 +1,17 @@
-var array1=[12,2,3,412,21, 3214 ,12,425];
-function_second(array1);
-
-function function_second (array) {
-	array=array.sort(function(a,b){return a-b});
-
-console.log(array[1]+" "+array[array.length-2]);
-}
+function isTime(str)  
+{  
+ regexp = /^(2[0-3]|[01]?[0-9]):([0-5]?[0-9]):([0-5]?[0-9])$/;  
+    
+        if (regexp.test(str))  
+          {  
+            return true;  
+          }  
+        else  
+          {  
+            return false;  
+          }  
+}  
+  
+console.log(isTime("11:35:30"));  
+  
+console.log(isTime("90:90:90"));  
